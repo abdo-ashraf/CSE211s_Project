@@ -25,14 +25,11 @@ void delay_sec(unsigned int times);
 #define RW 0x40 /* PORTA BIT6 mask     RW  = pin A6 */  
 #define EN 0x80 /* PORTA BIT7 mask     E   = Pin A7 */
 /*---------------------------------------------------------------------------------------------------------------------*/
-//LCD_command defines
+//used LCD_command defines
 #define clear_display     0x01
-#define moveCursorLeft    0x08
 #define cursorBlink       0x0F
 #define cursorOff         0x0C
 #define cursorOn          0x0E
-#define Function_set_4bit 0x28
-#define Function_8_bit    0x32
 #define Set5x7FontSize    0x20
 #define FirstRow          0x80
 #define SET_8BIT_DATA_2LINES 0X38
@@ -42,9 +39,7 @@ void delay_sec(unsigned int times);
 #define CURSOR_DECREMENTING  0X06
 #define CURSOR_POSITION_SH_LEFT 0X10
 #define CURSOR_POSITION_SH_RIGHT 0X014
-#define DISPLAY_SH_LEFT  0X18
-#define DISPLAY_SH_RIGHT 0X1C
-#define Function Set 8 – bit Mode, 1 Line, 5×7 Dots 0x30
+#define Function Set 8 â€“ bit Mode, 1 Line, 5Ã—7 Dots 0x30
 /*------------------------------------------------------------------------------------------------------------------------*/
 /*lcd functions prototype*/
 void LCD_command(uint8_t command) ;
