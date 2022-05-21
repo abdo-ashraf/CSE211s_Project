@@ -1,6 +1,5 @@
 #include "prototype&header.h"
 
-
 void beef(){
 	unsigned char key; // used to get pressed key
 	unsigned int time=0; //used to define time for cooking
@@ -23,7 +22,6 @@ void beef(){
 	GPIO_PORTF_DEN_R |= 0x11;
 	GPIO_PORTF_PUR_R |= 0x11;
 	
-	
 	GPIO_PORTF_LOCK_R = 0x4c4f434b;
 	GPIO_PORTF_AMSEL_R &= ~0x0E;
 	GPIO_PORTF_AFSEL_R &= ~0x0E;
@@ -32,7 +30,6 @@ void beef(){
 	GPIO_PORTF_DIR_R |= 0x0E;
 	GPIO_PORTF_CR_R |= 0x0E;
 	GPIO_PORTF_DATA_R &= ~0x0E;
-	
 	
 	GPIO_PORTE_CR_R |= 0x20;
 	GPIO_PORTE_AMSEL_R &= ~0x20;
@@ -71,9 +68,7 @@ re:
 			goto rt;
 		}
 	}
-	
 rt:
-	
 	for(i=time_sec; i>=0; i--){
 		char x [3];
 		char y [3];
