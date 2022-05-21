@@ -14,29 +14,29 @@ int main()
 			delay_ms(250);
 			key = keypad_scan();	// scan for pressed key by user
 			switch(key){
-									case 'A':
-										popcorn();
-									break;
+						case 'A':
+					        	popcorn();
+						break;
+								
+						case 'B':
+							beef();
+						break;
 									
-									case 'B':
-										beef();
-									break;
+	                           		case 'C':
+							chicken();
+						break;
+						
+						case 'D':
+							custom_cooking();
+						break;
 									
-									case 'C':
-										chicken();
-									break;
-									
-									case 'D':
-										custom_cooking();
-									break;
-									
-									default:
-										LCD_command(clear_display);
-										LCD_string("enter Characters");
-										LCD_command(CURSOR_ON_2ND_LINE);
-										LCD_string("from A, B, C, D");
-										delay_sec(2);
-									break;
+						default:
+							LCD_command(clear_display);
+							LCD_string("enter Characters");
+							LCD_command(CURSOR_ON_2ND_LINE);
+							LCD_string("from A, B, C, D");
+							delay_sec(2);
+							break;
 				}
 			}
 		}
