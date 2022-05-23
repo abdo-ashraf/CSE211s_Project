@@ -7,11 +7,11 @@
 #include <stdbool.h> // import bool datatype and true, flase 
 
 
-
+/*------------------------------------------*********keypad**********----------------------------------------------------*/
 //keypad_funcs.c
 void keypad_init(void);
 char keypad_scan(void);
-
+/*-----------------------------------------------*****delays********-------------------------------------------------------*/
 //delay_funcs.c
 void delay_ms(unsigned int times);
 void delay_us(unsigned int times);
@@ -24,7 +24,7 @@ void delay_sec(unsigned int times);
 #define RS 0x20 /* PORTA BIT5 mask     RS  = Pin A5*/
 #define RW 0x40 /* PORTA BIT6 mask     RW  = pin A6 */  
 #define EN 0x80 /* PORTA BIT7 mask     E   = Pin A7 */
-/*---------------------------------------------------------------------------------------------------------------------*/
+
 //used LCD_command defines
 #define clear_display     0x01
 #define cursorBlink       0x0F
@@ -40,13 +40,13 @@ void delay_sec(unsigned int times);
 #define CURSOR_POSITION_SH_LEFT 0X10
 #define CURSOR_POSITION_SH_RIGHT 0X014
 #define Function Set 8 – bit Mode, 1 Line, 5×7 Dots 0x30
-/*------------------------------------------------------------------------------------------------------------------------*/
+
 /*lcd functions prototype*/
 void LCD_command(uint8_t command) ;
 void LCD_char(uint8_t data) ;
 void LCD_init(void) ;
 void LCD_string(char *s);
-/*----------------------------------------------------End lcd-------------------------------------------------------------*/
+/*----------------------------------------------------****microwave functions****-------------------------------------------------------------*/
 //Beef.c
 void beef(void);
 
